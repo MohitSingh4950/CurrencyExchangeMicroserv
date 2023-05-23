@@ -1,0 +1,23 @@
+package com.codeanthem.currencycalculationservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
+
+import brave.sampler.Sampler;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients("com.codeanthem.currencycalculationservice")
+public class CurrencyCalculationServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CurrencyCalculationServiceApplication.class, args);
+	}
+	@Bean
+	public Sampler defaultsSampler() {
+		return Sampler.ALWAYS_SAMPLE;
+	}
+}
