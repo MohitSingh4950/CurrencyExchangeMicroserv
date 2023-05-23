@@ -7,3 +7,11 @@ The architecture incorporates a Spring Cloud Config Server, allowing users to st
  which replaces RestTemplate for efficient communication between microservices. Additionally,
  an API Gateway, powered by Zuul Server, manages all incoming requests and handles dynamic routing,
  enhancing the overall scalability and flexibility of the system.
+ 
+ implemented centralized logging
+Spring cloud sleuth-> it will generate a unique request
+Zipkin tracing server-> used to trace each request individualy and common logging goals
+
+Language used : Java
+Frameworks : Spring boot, H2DB, Eureka Discovery Client/Server
+Zipkin
