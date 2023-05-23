@@ -1,18 +1,9 @@
-# tecnotab-microservices-youtube
+CurrencyExchange Microservices:
 
-Port Configuration
----------------------------------------
-
-|Application | Ports |
-|------------|-------|
-|limits-service|8080,8081..|
-|Spring-cloud-config-server|	8888 |
-|Currency-exchange-service|	8000,8001,8002..|
-|Currency-calculation-Service|	8100,8101,8102…|
-|Nexflix Eureka Naming Server|	8761|
-|Netflix Zuul Gateway Server|	8765|
-|Zipkin Distributed Tracing server|	9411|
-
-
-
-
+The CurrencyExchange Microservices is a Spring 
+Boot project that leverages the power of Spring Cloud features for load balancing and fault tolerance. 
+The architecture incorporates a Spring Cloud Config Server, allowing users to store port
+ and configuration settings in a centralized location. The project utilizes Feign client,
+ which replaces RestTemplate for efficient communication between microservices. Additionally,
+ an API Gateway, powered by Zuul Server, manages all incoming requests and handles dynamic routing,
+ enhancing the overall scalability and flexibility of the system.
